@@ -37,11 +37,22 @@ export default function TrafficSourcesChart({
         <div className="h-75 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="source" />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="visitors" fill="black" radius={[6, 6, 0, 0]} />
+              <CartesianGrid stroke="var(--border)" strokeDasharray="3 3" />
+              <XAxis dataKey="source" stroke="var(--muted-foreground)" />
+              <YAxis stroke="var(--muted-foreground)" />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "var(--card)",
+                  color: "var(--card-foreground)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "12px",
+                }}
+              />
+              <Bar
+                dataKey="visitors"
+                fill="var(--chart-2)"
+                radius={[6, 6, 0, 0]}
+              />
             </BarChart>
           </ResponsiveContainer>
         </div>

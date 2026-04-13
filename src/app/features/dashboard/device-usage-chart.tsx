@@ -15,7 +15,7 @@ type DeviceUsageChartProps = {
   data: DeviceUsage[];
 };
 
-const COLORS = ["#111111", "#555555", "#999999"];
+const COLORS = ["var(--chart-1)", "var(--chart-2)", "var(--chart-3)"];
 
 export default function DeviceUsageChart({ data }: DeviceUsageChartProps) {
   return (
@@ -36,13 +36,23 @@ export default function DeviceUsageChart({ data }: DeviceUsageChartProps) {
                 cx="50%"
                 cy="50%"
                 outerRadius={100}
-                label
+                label={{ fill: "var(--foreground)", fontSize: 12 }}
               >
-                {data.map((entry) => (
-                  <Cell key={entry.device} fill={COLORS[data.indexOf(entry)]} />
+                {data.map((entry, index) => (
+                  <Cell
+                    key={entry.device}
+                    fill={COLORS[index % COLORS.length]}
+                  />
                 ))}
               </Pie>
-              <Tooltip />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "var(--card)",
+                  color: "var(--card-foreground)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "12px",
+                }}
+              />
             </PieChart>
           </ResponsiveContainer>
         </div>

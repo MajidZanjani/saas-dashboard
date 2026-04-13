@@ -37,15 +37,24 @@ export default function AnalyticsRevenueChart({
         <div className="h-75 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="month" />
-              <YAxis />
-              <Tooltip />
+              <CartesianGrid stroke="var(--border)" strokeDasharray="3 3" />
+              <XAxis dataKey="month" stroke="var(--muted-foreground)" />
+              <YAxis stroke="var(--muted-foreground)" />
+              <Tooltip
+                contentStyle={{
+                  backgroundColor: "var(--card)",
+                  color: "var(--card-foreground)",
+                  border: "1px solid var(--border)",
+                  borderRadius: "12px",
+                }}
+              />
               <Line
                 type="monotone"
                 dataKey="revenue"
-                stroke="black"
+                stroke="var(--chart-1)"
                 strokeWidth={2}
+                dot={{ fill: "var(--chart-1)" }}
+                activeDot={{ r: 6 }}
               />
             </LineChart>
           </ResponsiveContainer>

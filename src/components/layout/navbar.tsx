@@ -4,6 +4,7 @@ import LogoutButton from "@/components/layout/logout-button";
 import MobileSidebar from "@/components/layout/mobile-sidebar";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import ModeToggle from "../mode-toggle";
 
 export default function Navbar() {
   return (
@@ -17,6 +18,7 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center gap-3">
+        <ModeToggle />
         <Button variant="outline" size="icon">
           <Bell className="h-4 w-4" />
           <span className="sr-only">Notifications</span>

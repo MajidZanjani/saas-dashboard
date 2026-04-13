@@ -37,7 +37,6 @@ export default function LoginForm() {
               id="email"
               name="email"
               type="email"
-              placeholder="demo@saas.com"
               defaultValue="demo@saas.com"
               required
             />
@@ -49,7 +48,6 @@ export default function LoginForm() {
               id="password"
               name="password"
               type="password"
-              placeholder="password123"
               defaultValue="password123"
               required
             />
