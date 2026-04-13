@@ -1,5 +1,6 @@
 import { Bell } from "lucide-react";
 
+import LogoutButton from "@/components/layout/logout-button";
 import MobileSidebar from "@/components/layout/mobile-sidebar";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
@@ -24,6 +25,8 @@ export default function Navbar() {
         <Avatar>
           <AvatarFallback>MZ</AvatarFallback>
         </Avatar>
+
+        <LogoutButton />
       </div>
     </header>
   );
