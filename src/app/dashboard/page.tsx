@@ -6,6 +6,7 @@ import RevenueChart from "../features/dashboard/revenue-chart";
 import StatsCards from "../features/dashboard/stats-cards";
 import UsersTable from "../features/dashboard/users-table";
 import { useDashboardData } from "../features/dashboard/use-dashboard-data";
+import AIInsightsPanel from "../features/dashboard/ai-insights-panel";
 
 export default function DashboardPage() {
   const { data, isLoading, isError, error } = useDashboardData();
@@ -40,7 +41,15 @@ export default function DashboardPage() {
         <RecentActivity items={data.recentActivity} />
       </section>
 
-      <UsersTable users={data.users} />
+      <section className="grid gap-4 xl:grid-cols-3">
+        <div className="xl:col-span-2">
+          <UsersTable users={data.users} />
+        </div>
+
+        <div>
+          <AIInsightsPanel />
+        </div>
+      </section>
     </div>
   );
 }

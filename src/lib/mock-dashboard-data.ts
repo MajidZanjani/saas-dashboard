@@ -124,4 +124,27 @@ export const mockDashboardData: DashboardData = {
     "Admin updated billing settings",
     "Subscription upgraded to Pro",
   ],
+  aiInsights: [
+    {
+      id: 1,
+      title: "Revenue growth detected",
+      summary:
+        "Revenue increased steadily over the last 3 months, showing a positive upward trend in customer spending.",
+      severity: "low",
+    },
+    {
+      id: 2,
+      title: "User conversion opportunity",
+      summary:
+        "A large portion of users remain on the Free plan. Promoting Pro features could improve upgrade conversions.",
+      severity: "medium",
+    },
+    {
+      id: 3,
+      title: "Inactive users increasing",
+      summary:
+        "Inactive accounts have grown compared to previous periods. Consider a re-engagement email campaign.",
+      severity: "high",
+    },
+  ],
 };

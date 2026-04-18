@@ -17,13 +17,6 @@ export type User = {
   status: "Active" | "Pending" | "Inactive";
 };
 
-export type DashboardData = {
-  stats: Stat[];
-  revenue: RevenuePoint[];
-  users: User[];
-  recentActivity: string[];
-};
-
 export type AnalyticsStat = {
   title: string;
   value: string;
@@ -45,4 +38,19 @@ export type AnalyticsData = {
   trafficSources: TrafficSource[];
   deviceUsage: DeviceUsage[];
   revenueTrend: RevenuePoint[];
+};
+
+export type AIInsight = {
+  id: number;
+  title: string;
+  summary: string;
+  severity: "high" | "medium" | "low";
+};
+
+export type DashboardData = {
+  stats: Stat[];
+  revenue: RevenuePoint[];
+  users: User[];
+  recentActivity: string[];
+  aiInsights: AIInsight[];
 };
