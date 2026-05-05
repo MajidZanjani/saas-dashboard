@@ -32,7 +32,7 @@ export default function RevenueChart({ data }: RevenueChartProps) {
       </CardHeader>
 
       <CardContent>
-        <div className="h-75 w-full">
+        <div className="h-75 min-w-0 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={data}>
               <CartesianGrid stroke="var(--border)" strokeDasharray="3 3" />

@@ -62,11 +62,11 @@ export default function AnalyticsPage() {
 
       <AnalyticsStats stats={data.stats} />
 
-      <section className="grid gap-4 lg:grid-cols-4">
+      <section className="grid min-w-0 gap-4 lg:grid-cols-7">
         <AnalyticsRevenueChart data={data.revenueTrend} />
       </section>
 
-      <section className="grid gap-4 lg:grid-cols-2">
+      <section className="grid min-w-0 gap-4 lg:grid-cols-2">
         <TrafficSourcesChart data={data.trafficSources} />
         <DeviceUsageChart data={data.deviceUsage} />
       </section>
